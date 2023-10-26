@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> form page </title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+  <link rel="stylesheet" href="C:\Users\Om and Prarthana\Desktop\project\form page\flask\form.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900|Material+Icons'><link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+
+
+
+</head>
+<body>
+<style>
+    @import url('https://fonts.cdnfonts.com/css/rinebold-gutisky');
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  
+    
+  }
+
+  .disc{
+    padding-left: 1%;
+    margin-top:25px;
+    font-family: 'Rinebold Gutisky', sans-serif;
+    font-size: 300%;
+    font-style: oblique;
+    text-align: justify;
+    
+  }
+  
+
+  .h1{
+    margin-top:30px;
+    font-weight: bolder;
+    font-size: 180%;
+  }
+  form{
+    margin-top:20px;
+  }
+  .quiz-container {
+    width: 95%;
+    margin: 0 auto;
+    
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .question {
+    width:45%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding:20px;
+  }
+  .question:nth-child(odd){
+    margin-right:5%;
+  }
+  .question p{
+    font-weight: bold;
+    font-size: 200%;
+  }
+  
+  .answers {
+    margin-bottom: 20px;
+    font-size: 150%;
+  }
+  
+  
+  label {
+    padding:10px 0;
+    display: block;
+
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .submit {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #09a5f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .submit:hover{
+    color: #f2f2f2;
+    background: #C06B3E;
+    transition: 0.2s;
+  }
+  
+  
+  
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  color: #f2f2f2;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+nav{
+  background: #222222;
+  padding: 10px 40px 10px 70px;
+  border: 1px solid #000;
+  border-left: none;
+  border-right: none;
+}
+nav ul{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li.logo{
+  flex: 1;
+  font-size: 30px;
+  font-weight: 700;
+}
+nav ul div.items{
+  padding: 0 25px;
+  display: inline-flex;
+}
+nav ul div.items a{
+  text-decoration: none;
+  font-size: 18px;
+  padding: 0 12px;
+}
+nav ul div.items a:hover{
+  color: cyan;
+}
+nav ul .search-icon{
+  height: 40px;
+  width: 240px;
+  display: flex;
+  background: #f2f2f2;
+  border-radius: 5px;
+}
+nav ul .search-icon input{
+  height: 100%;
+  width: 200px;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  color: #000;
+  font-size: 16px;
+  border-radius: 5px 0 0 5px;
+}
+nav ul .search-icon .icon{
+  height: 100%;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #cccccc;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+nav ul .search-icon .icon:hover{
+  background: #e6e6e6;
+}
+nav ul .search-icon .icon span{
+  color: #04d9fa;
+  font-size: 18px;
+}
+nav ul li.btn{
+  font-size: 29px;
+  flex: 1;
+  padding: 0 40px;
+  display: none;
+}
+nav ul li.btn span{
+  height: 42px;
+  width: 42px;
+  text-align: center;
+  line-height: 42px;
+  border: 1px solid #151515;
+  border-radius: 5px;
+  cursor: pointer;
+}
+nav ul li.btn span.show:before{
+  content: '\f00d';
+}
+@media screen and (max-width: 1052px) {
+  nav{
+    padding: 10px 40px 10px 0px;
+  }
+  nav ul li.logo{
+    display: none;
+  }
+  nav ul div.items{
+    flex: 4;
+  }
+}
+@media screen and (max-width: 800px){
+  nav ul li.btn{
+    display: block;
+  }
+  nav{
+    z-index: 1;
+    padding: 9px 40px 9px 0;
+  }
+  nav ul div.items{
+    z-index: -1;
+    position: fixed;
+    top: -220px;
+    right: 0;
+    width: 100%;
+    background: #222222;
+    display: inline-block;
+    transition: top .4s;
+  }
+  nav ul div.items.show{
+    top: 60px;
+  }
+  nav ul div.items li{
+    text-align: center;
+    line-height: 30px;
+    margin: 30px 0;
+  }
+  nav ul div.items li a{
+    font-size: 19px;
+  }
+}
+@media screen and (max-width: 405px) {
+  nav ul{
+    flex-wrap: nowrap;
+  }
+  nav ul li.search{
+    width: 50vmin;
+  }
+  nav ul li input{
+    width: 40vmin;
+  }
+  nav ul li .search-icon{
+    width: 10vmin;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  padding: 0 40px;
+  z-index: -2;
+}
+.content .text{
+  font-size: 40px;
+  font-weight: 800;
+  padding: 5px 0;
+  color: #202020;
+}
+.content .p{
+  font-size: 28px;
+  font-weight: 600;
+  color: #202020;
+}
+
+.logo span{
+  font-size: 140%;
+  color: #09dcf4;
+}
+
+@-webkit-keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+    }
+  }
+  
+  @keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+    }
+  }
+
+  .text{
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    left: 5%;
+    bottom: 40%;
+    text-transform: none;
+    text-size-adjust: inherit;
+  }
+  .text button{
+    background: #04cef6;
+    padding: 12px 30px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 6px;
+    margin-top: 38px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+  }
+  .text button:hover{
+    color: #fff;
+    background: #C06B3E;
+  }
+  
+  main {
+    right: 0%;
+    position: absolute;
+    width: calc(min(200rem, 48%));
+    height: 80%;
+    margin: 0 auto;
+    min-height: 95vh;
+    column-gap: 3rem;
+    padding-block: min(20vh, 3rem);
+    
+  }
+
+  @media screen and (min-width: 48rem) {
+    main {
+      display: flex;
+      align-items: center;
+    }
+  
+  
+  @media screen and (min-width: 94.75rem) {
+    .swiper {
+      width: 85%;
+    }
+  }
+  }
+  
+  body{
+
+    background: rgb(2,1,19);
+    background: linear-gradient(90deg, rgba(2,1,19,1) 0%, rgba(60,9,121,1) 34%, rgba(0,212,255,1) 100%);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+ 
+  
+  
+</style>
+  <nav>
+    <ul>
+       <li class="logo">SmartRec<span>.</span></li>
+       <li class="btn"><span class="fas fa-bars"></span></li>
+      
+    </ul>
+ </nav>
+
+ <section class="disc" >
+    SmartRec aims to address this limitation by taking into account the user's current
+    mood, as well as their historical preferences and behaviors. By doing so, it seeks
+    to create an engaging and highly customized content recommendation experience.
+</section>
+<div class="quiz-container">
+    <h1 class="h1">Let's find this by answering this question</h1>
+    <hr>
+    <form action="." method="POST" name="quizForm">
+        <div class="d-flex">
+            <div class="question">
+                <p>1.Age group </p><br>
+
+                <div class="answers">
+                    
+                    <label><input type="radio" name="q1" value=1>Under 18 Years</label>
+                    <label><input type="radio" name="q1" value=2>18-24 years</label>
+                    <label><input type="radio" name="q1" value=3>25-34 years</label>
+                    <label><input type="radio" name="q1" value=4>35-44 years</label>
+                    <label><input type="radio" name="q1" value=5>Above 45 years</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. Gender </p><br>
+                <div class="answers">
+                    
+                    <label><input type="radio" name="q2" value=1>Male</label>
+                    <label><input type="radio" name="q2" value=2>Female</label>
+                    <label><input type="radio" name="q2" value=3>Non-Binary</label>
+                    <label><input type="radio" name="q2" value=4>Prefer not to say</label>
+                    
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. What is your relationship status? </p><br>
+                <div class="answers">
+                    
+                    <label><input type="radio" name="q3" value=1>Dating</label>
+                    <label><input type="radio" name="q3" value=2>Single</label>
+                    <label><input type="radio" name="q3" value=3>Divorced</label>
+                    <label><input type="radio" name="q3" value=4>Seperated</label>
+                    <label><input type="radio" name="q3" value=5>Married</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. Average sleep hours? </p><br>
+                <div class="answers">
+                    
+                    <label><input type="radio" name="q4" value=1>0-3 hours</label>
+                    <label><input type="radio" name="q4" value=2>3-6 hours</label>
+                    <label><input type="radio" name="q4" value=3>6-8 hours</label>
+                    <label><input type="radio" name="q4" value=4>8+ hours</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. how you are feeling most of the time? </p><br>
+                <div class="answers">
+                    
+                    <label><input type="radio" name="q5" value=1>Average</label>
+                    <label><input type="radio" name="q5" value=2>Active</label>
+                    <label><input type="radio" name="q5" value=3>Healthy</label>
+                    <label><input type="radio" name="q5" value=4>Lethargic(not willing to work)</label>
+                    
+                    
+                </div>
+            </div>
+
+
+            <div class="question">
+                <p>6. how often do you take caffenine ?</p><br>
+                <div class="answers">
+                    
+                    <label><input type="radio" name="q6" value=1>Once in a while</label>
+                    <label><input type="radio" name="q6" value=2>Never</label>
+                    <label><input type="radio" name="q6" value=3>Weekly</label>
+                    <label><input type="radio" name="q6" value=4>Daily</label>
+                    
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. Do you face trouble concentrating or focusing on stuffs? </p><br>
+                <div class="answers">
+                    
+                    <label><input type="radio" name="q7" value=1>Most of the time</label>
+                    <label><input type="radio" name="q7" value=2>Never</label>
+                    <label><input type="radio" name="q7" value=3>Sometimes</label>
+                    
+                    
+                </div>
+            </div>
+
+          
+            <div class="question">
+                <p>8. Overthinking a lot about the things surrounding us?</p><br>
+                <div class="answers">
+                    
+                    <label><input type="radio" name="q8" value=1>More than half of the day</label>
+                    <label><input type="radio" name="q8" value=2>Nearly every day</label>
+                    <label><input type="radio" name="q8" value=3>In Several days</label>
+                    <label><input type="radio" name="q8" value=4>Not at all</label>
+                    <label><input type="radio" name="q8" value=5>Several times in a day</label>
+                    
+                </div>
+            </div>
+
+        </div>
+        
+        <button type="submit" class="submit" value="submit" onclick="submit_form()" >Submit</button>
+    
+    <div class="result" id="result"></div>
+    </form>
+</div>
+   
+ 
+ <script>
+    $(document).ready(function () {
+        $('#quizForm').submit(function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            var formData = $('#quizForm').serialize();
+
+            $.ajax({
+                type: 'POST',
+                url: '/submit',
+                data: formData,
+                success: function (response) {
+                    $('#result').html(response);
+                },
+                error: function (error) {
+                    console.log('Error:', error);
+                }
+            });
+        });
+    });
+
+ </script>
+
+
+ </body>
+ </html>
